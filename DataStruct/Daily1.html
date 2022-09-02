@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Daily1</title>
+</head>
+<body>
+    
+</body>
+<script>
+var maxSubArray = function(nums) {
+    let pre = 0, maxAns = nums[0];
+    nums.forEach((x) => {
+        pre = Math.max(pre + x, x);
+        //pre 一定大于x的，这一是为了累积，二是为了把初始值为负数的情况清除
+        //pre is 累积值
+        maxAns = Math.max(maxAns, pre);
+    });
+    return maxAns;
+};
+
+
+
+
+
+
+</script>
+</html>
